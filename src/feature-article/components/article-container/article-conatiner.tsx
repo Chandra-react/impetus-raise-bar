@@ -3,8 +3,9 @@ import { ArticleCard } from '../article-card/article-card';
 import { CategoryList } from '../category-list/category-list';
 import styles from './article-container.module.scss';
 import { ArticleContainerProps } from '../../models';
-import { Loader, ErrorComponent, Layout, NoDataComponent } from '../../../component';
+import { Loader, ErrorComponent, Layout } from '../../../component';
 import useTranslation from 'next-translate/useTranslation';
+import { NoDataComponent } from '../../../component/no-data-component/no-data-component';
 
 export const ArticleContainer = ({
   articleData,
@@ -20,7 +21,7 @@ export const ArticleContainer = ({
   const onScroll = () => {
     if (listInnerRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = listInnerRef.current;
-      if (scrollTop + clientHeight === scrollHeight && articleData.length < totalCount && !loading) {
+      if (Math.round(scrollTop) + clientHeight === scrollHeight && articleData.length < totalCount && !loading) {
         updatePagination();
       }
     }

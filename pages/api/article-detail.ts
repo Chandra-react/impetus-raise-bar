@@ -1,15 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connectDB } from '../../middleware/mongodb';
-import { Article } from '../../modals';
-import mongoose from 'mongoose';
-
-export interface ResponseFuncs {
-  GET?: Function;
-  POST?: Function;
-  PUT?: Function;
-  DELETE?: Function;
-}
+import { Article } from '../../schema-modals';
+import { ResponseFuncs } from '../../src/utils';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   //capture request method, we type it as a key of ResponseFunc to reduce typing later

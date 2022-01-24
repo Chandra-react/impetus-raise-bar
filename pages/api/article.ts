@@ -1,28 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connectDB } from '../../middleware/mongodb';
-import { Article } from '../../modals';
-
-export interface ResponseFuncs {
-  GET?: Function;
-  POST?: Function;
-  PUT?: Function;
-  DELETE?: Function;
-}
-
-// Interface to define our Todo model on the frontend
-interface article {
-  author: string;
-  title: string;
-  description: string;
-  url: string;
-  image: string;
-  published_at: Date;
-  category: string;
-  country: string;
-  language: string;
-  source: string;
-}
+import { Article } from '../../schema-modals';
+import { ResponseFuncs } from '../../src/utils';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   //capture request method, we type it as a key of ResponseFunc to reduce typing later
