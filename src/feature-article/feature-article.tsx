@@ -45,8 +45,12 @@ export const FeatureArticle = ({ language }: { language?: string }) => {
   }, [selectedCategory, language]);
 
   const getCategory = useCallback(async () => {
-    const response = await getCategories();
-    setCategoryList(response);
+    try {
+      const response = await getCategories();
+      setCategoryList(response);
+    } catch (error) {
+      setError(true);
+    }
   }, []);
   useEffect(() => {
     getCategory();
