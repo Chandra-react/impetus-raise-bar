@@ -26,7 +26,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const response = await Article.findOne({ _id: id, language }).catch(catcher);
       const limit = Math.floor(Math.random() * 10);
 
-      const relatedArticles = await Article.find({}).limit(3).skip(limit).catch(catcher);
+      const relatedArticles = await Article.find({ language }).limit(3).skip(limit).catch(catcher);
       return res.json({ detail: response, relatedArticles: relatedArticles });
     },
   };

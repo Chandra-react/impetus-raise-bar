@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 export const FeatureArticle = ({ language }: { language?: string }) => {
   const [data, setData] = useState<Article[]>([]);
   const [count, setCount] = useState(0);
-  const [pagination, setPagination] = useState({ limit: 20, page: 1 });
+  const [pagination, setPagination] = useState({ limit: 20, page: 0 });
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
   const [categoryList, setCategoryList] = useState([]);
@@ -28,7 +28,9 @@ export const FeatureArticle = ({ language }: { language?: string }) => {
       if (search) args['search'] = search;
       setLoading(true);
       const response = await getArticles(args);
-      setData((data) => [...data, ...response.data]);
+      setData((data) => {
+        return [...data, ...response.data];
+      });
       setCount(response.count);
       setLoading(false);
       setError(false);
@@ -50,7 +52,7 @@ export const FeatureArticle = ({ language }: { language?: string }) => {
     getCategory();
   }, [getCategory]);
   useEffect(() => {
-    getArticle();
+    if (pagination.page > 0) getArticle();
   }, [pagination]);
   useEffect(() => {
     resetValues();
@@ -59,6 +61,7 @@ export const FeatureArticle = ({ language }: { language?: string }) => {
   const updatePagination = () => {
     setPagination((preData) => ({ limit: preData.limit, page: preData.page + 1 }));
   };
+
   const updateSelectedCategory = (category: string) => {
     const categories: string[] = [...selectedCategory];
     const isCategorySelected = categories.findIndex((data) => data === category);
@@ -66,6 +69,7 @@ export const FeatureArticle = ({ language }: { language?: string }) => {
     else categories.push(category);
     setSelectedCategory(categories);
   };
+
   const updateSearch = (value: string) => {
     setSearch(value);
   };

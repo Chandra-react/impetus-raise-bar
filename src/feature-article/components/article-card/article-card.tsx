@@ -34,7 +34,7 @@ export const ArticleCard = ({
   const { t } = useTranslation('common');
   return (
     <article
-      key={url}
+      key={_id}
       className={styles[className]}
       onClick={() => {
         navigate?.(`${ARTICLE_DETAILS}/${_id}`);
