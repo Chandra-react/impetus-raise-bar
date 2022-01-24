@@ -1,0 +1,17 @@
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    font: 900 20px/26px Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 12px;
+  }
+  p:last-child {
+    font: 20px/26px Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 12px;
+  }
+}

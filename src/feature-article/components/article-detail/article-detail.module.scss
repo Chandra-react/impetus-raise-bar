@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex: 7 7;
+}
+
+.article-container {
+  border-left: 1px solid #eeeeee;
+  padding: 15px;
+  flex: 5 5;
+  h4 {
+    margin: 0 5px 15px;
+    padding: 0;
+  }
+}
+
+.card-container {
+  max-height: calc(100vh - 180px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}

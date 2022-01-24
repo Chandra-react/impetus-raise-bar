@@ -1,0 +1,16 @@
+{
+  "business": "business",
+  "entertainment": "entertainment",
+  "politics": "politics",
+  "science": "science",
+  "sports": "sports",
+  "technology": "technology",
+  "category": "category",
+  "error_message": "This section didn't load as expected, but we're working to get it back ASAP",
+  "page_not_found": "Ooops, We can't seem to find this page",
+  "no_data_message": "No results found for the selected language.",
+  "no_data_message_1": "The article you are trying to view is not available in the selected language. Try switching to another language.",
+  "related_news": "Related News",
+  "search": "Search",
+  "article_details": "Article Details"
+}

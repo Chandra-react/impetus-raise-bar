@@ -1,0 +1,16 @@
+{
+  "business": "negocio",
+  "entertainment": "entretenimiento",
+  "politics": "política",
+  "science": "Ciencias",
+  "sports": "Deportes",
+  "technology": "tecnología",
+  "category": "Categoría",
+  "error_message": "Esta sección no se cargó como se esperaba, pero estamos trabajando para recuperarla lo antes posible.",
+  "page_not_found": "Vaya, parece que no podemos encontrar esta página",
+  "no_data_message": "No se encontraron resultados para el idioma seleccionado.",
+  "no_data_message_1": "El artículo que intenta ver no está disponible en el idioma seleccionado. Intente cambiar a otro idioma.",
+  "related_news": "Noticias relacionadas",
+  "search": "Búsqueda",
+  "article_details": "Detalles del artículo"
+}
