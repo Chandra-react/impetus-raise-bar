@@ -27,7 +27,7 @@ export const ArticleContainer = ({
     }
   };
   return (
-    <Layout>
+    <Layout title={t('articles')}>
       <div className={styles['conatiner']}>
         {!error ? (
           <>

@@ -17,7 +17,7 @@ export interface ArticleDetailProps {
 export const ArticleDetail = ({ article, relatedArticles, navigate, error, onBackClick }: ArticleDetailProps) => {
   const { t } = useTranslation('common');
   return (
-    <Layout>
+    <Layout title={article?.title || t('article_details')}>
       <PageHeader onBackClick={onBackClick} title={t('article_details')} />
       {!error ? (
         article && Object.keys(article).length !== 0 ? (

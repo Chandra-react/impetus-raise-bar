@@ -12,5 +12,6 @@
   "no_data_message_1": "El artículo que intenta ver no está disponible en el idioma seleccionado. Intente cambiar a otro idioma.",
   "related_news": "Noticias relacionadas",
   "search": "Búsqueda",
-  "article_details": "Detalles del artículo"
+  "article_details": "Detalles del artículo",
+  "articles": "artículos"
 }

@@ -22,9 +22,6 @@ export const Input = ({ value, onChange, onBlur, placeholder, icon = '/images/se
         onChange={(e) => {
           onChange(e.target.value);
         }}
-        onKeyPress={(event) => {
-          if (event.code == 'Enter') onBlur?.();
-        }}
         onBlur={() => {
           onBlur?.();
         }}

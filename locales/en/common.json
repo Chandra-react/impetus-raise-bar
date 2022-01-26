@@ -12,5 +12,6 @@
   "no_data_message_1": "The article you are trying to view is not available in the selected language. Try switching to another language.",
   "related_news": "Related News",
   "search": "Search",
-  "article_details": "Article Details"
+  "article_details": "Article Details",
+  "articles": "Articles"
 }
