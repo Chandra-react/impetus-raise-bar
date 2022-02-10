@@ -27,6 +27,7 @@ export async function getServerSideProps(context: any) {
   } catch (error) {
     error = true;
   }
+  for (let i = 0; i <= 10000000; i++) {}
   return {
     props: { data, relatedArticles, error }, // will be passed to the page component as props
   };
