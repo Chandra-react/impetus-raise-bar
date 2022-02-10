@@ -18,8 +18,9 @@ export async function getServerSideProps(context: any) {
   let data = {};
   let relatedArticles = [];
   let error = false;
+  const base_url = process.env.BASE_URL;
   try {
-    const response = await axios.get('http://localhost:3000/api/article-detail', {
+    const response = await axios.get(`${base_url}/api/article-detail`, {
       params: { articleId, language: locale || 'en' },
     });
     data = response.data.detail;
