@@ -10,3 +10,13 @@
   bottom: 0;
   width: 100%;
 }
+
+.page-loader {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
