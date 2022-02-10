@@ -20,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const limit = Math.floor(Math.random() * 10);
 
       const relatedArticles = await Article.find({ language }).limit(3).skip(limit).catch(catcher);
-      return res.json({ detail: response, relatedArticles: relatedArticles });
+      return res.status(200).json({ detail: response, relatedArticles: relatedArticles });
     },
   };
 

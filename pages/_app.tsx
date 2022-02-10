@@ -8,11 +8,9 @@ import { Loader } from '../src/component';
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
   Router.events.on('routeChangeStart', (url) => {
-    console.log('route is changing');
     setLoading(true);
   });
   Router.events.on('routeChangeComplete', (url) => {
-    console.log('Route change is complete');
     setLoading(false);
   });
   return (
